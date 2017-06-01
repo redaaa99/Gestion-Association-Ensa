@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>513</width>
+    <width>559</width>
     <height>419</height>
    </rect>
   </property>
@@ -46,11 +46,16 @@ p, li { white-space: pre-wrap; }
      <height>21</height>
     </rect>
    </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
    <property name="text">
     <string>Membre CA</string>
    </property>
    <property name="checkable">
-    <bool>false</bool>
+    <bool>true</bool>
    </property>
   </widget>
   <widget class="QCheckBox" name="checkBox_2">
@@ -58,15 +63,20 @@ p, li { white-space: pre-wrap; }
     <rect>
      <x>390</x>
      <y>36</y>
-     <width>121</width>
+     <width>171</width>
      <height>31</height>
     </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+    </font>
    </property>
    <property name="text">
     <string>Membre de l'executif</string>
    </property>
    <property name="checkable">
-    <bool>false</bool>
+    <bool>true</bool>
    </property>
   </widget>
   <widget class="QLabel" name="label">
@@ -74,9 +84,14 @@ p, li { white-space: pre-wrap; }
     <rect>
      <x>20</x>
      <y>80</y>
-     <width>111</width>
+     <width>191</width>
      <height>31</height>
     </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+    </font>
    </property>
    <property name="text">
     <string>N° Diplomé:</string>
@@ -87,9 +102,14 @@ p, li { white-space: pre-wrap; }
     <rect>
      <x>20</x>
      <y>110</y>
-     <width>91</width>
+     <width>211</width>
      <height>31</height>
     </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+    </font>
    </property>
    <property name="text">
     <string>Nom Prénom:</string>
@@ -100,9 +120,14 @@ p, li { white-space: pre-wrap; }
     <rect>
      <x>260</x>
      <y>80</y>
-     <width>231</width>
+     <width>281</width>
      <height>31</height>
     </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+    </font>
    </property>
    <property name="text">
     <string>Numéro Telephone:</string>
@@ -113,9 +138,14 @@ p, li { white-space: pre-wrap; }
     <rect>
      <x>20</x>
      <y>140</y>
-     <width>151</width>
+     <width>231</width>
      <height>31</height>
     </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+    </font>
    </property>
    <property name="text">
     <string>Date de Naissance:</string>
@@ -130,6 +160,11 @@ p, li { white-space: pre-wrap; }
      <height>31</height>
     </rect>
    </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
    <property name="text">
     <string>Adresse:</string>
    </property>
@@ -139,9 +174,14 @@ p, li { white-space: pre-wrap; }
     <rect>
      <x>20</x>
      <y>170</y>
-     <width>121</width>
+     <width>141</width>
      <height>41</height>
     </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+    </font>
    </property>
    <property name="text">
     <string>Diplôme obtenus:</string>
@@ -152,7 +192,7 @@ p, li { white-space: pre-wrap; }
     <rect>
      <x>20</x>
      <y>170</y>
-     <width>481</width>
+     <width>531</width>
      <height>16</height>
     </rect>
    </property>
@@ -165,7 +205,7 @@ p, li { white-space: pre-wrap; }
     <rect>
      <x>20</x>
      <y>200</y>
-     <width>481</width>
+     <width>531</width>
      <height>91</height>
     </rect>
    </property>
@@ -175,7 +215,7 @@ p, li { white-space: pre-wrap; }
     <rect>
      <x>20</x>
      <y>290</y>
-     <width>481</width>
+     <width>531</width>
      <height>16</height>
     </rect>
    </property>
@@ -192,6 +232,11 @@ p, li { white-space: pre-wrap; }
      <height>41</height>
     </rect>
    </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
    <property name="text">
     <string>Contributions : </string>
    </property>
@@ -201,7 +246,7 @@ p, li { white-space: pre-wrap; }
     <rect>
      <x>20</x>
      <y>320</y>
-     <width>481</width>
+     <width>531</width>
      <height>91</height>
     </rect>
    </property>

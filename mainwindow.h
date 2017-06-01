@@ -18,6 +18,9 @@ class MainWindow : public QMainWindow
 
 public:
     explicit MainWindow(QWidget *parent = 0);
+    QSqlQueryModel *model;
+    QSqlQueryModel *modelsollicit;
+    QSqlDatabase db;
     ~MainWindow();
 
 private slots:
@@ -26,8 +29,7 @@ private slots:
 
 private:
     Ui::MainWindow *ui;
-    QSqlQueryModel *model;
-    QSqlDatabase db;
+
 };
 
 #endif // MAINWINDOW_H
