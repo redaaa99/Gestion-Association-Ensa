@@ -29,10 +29,14 @@ sollicitinfo::sollicitinfo(QString indanneecompagne,QString indnumfich) :
     ui->label_2->setText("Annnée Campagne:"+AnneeCampagne);
     ui->label_5->setText("Debut: "+datedeb);
     ui->label_6->setText("Fin: "+datefin);
-    modeldiplom->setQuery("SELECT NomMembre,DateSollicit,TelMembre,MontantVersement,DateVersement FROM `sollicitation`,`campagne`,`membre`,`versement` WHERE (sollicitation.NumMembreSolliciteur="+nummembresollciteur+"&& sollicitation.NumMembreSollicitee=membre.NumMembre && versement.NumMembre = sollicitation.NumMembreSollicitee) GROUP BY NomMembre ");
+    modeldiplom->setQuery("SELECT NomMembre as Nom,DateSollicit as DateSol,TelMembre as Telephone,MontantVersement as 'Montant(DHS)',DateVersement as 'Date Versement' FROM `sollicitation`,`campagne`,`membre`,`versement` WHERE (sollicitation.NumMembreSolliciteur="+nummembresollciteur+"&& sollicitation.NumMembreSollicitee=membre.NumMembre && versement.NumMembre = sollicitation.NumMembreSollicitee) GROUP BY NomMembre ");
     ui->tableView->setModel(modeldiplom);
-    modelorganism->setQuery("SELECT NomOrganisme,DateSollicit,TelMembre,MontantVersement,DateVersement FROM `sollicitation`,`campagne`,`membre`,`versement`,`organisme` WHERE (sollicitation.NumMembreSolliciteur="+nummembresollciteur+" && sollicitation.Numorganisme = organisme.NumOrganisme) GROUP BY NomOrganisme");
+    ui->tableView->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch);
+    ui->tableView->verticalHeader()->setVisible(false);
+    modelorganism->setQuery("SELECT NomOrganisme as Organisme,DateSollicit as DateSol,TelMembre as Telephone,MontantVersement as 'Montant(DHS)' ,DateVersement as 'Date Versement' FROM `sollicitation`,`campagne`,`membre`,`versement`,`organisme` WHERE (sollicitation.NumMembreSolliciteur="+nummembresollciteur+" && sollicitation.Numorganisme = organisme.NumOrganisme) GROUP BY NomOrganisme");
     ui->tableView_2->setModel(modelorganism);
+    ui->tableView_2->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch);
+    ui->tableView_2->verticalHeader()->setVisible(false);
 }
 
 sollicitinfo::~sollicitinfo()
