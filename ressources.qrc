@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/">
+        <file>marrakech.png</file>
+    </qresource>
+</RCC>
