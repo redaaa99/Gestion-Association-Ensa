@@ -16,15 +16,18 @@ TEMPLATE = app
 SOURCES += main.cpp\
         mainwindow.cpp \
     membreinfo.cpp \
-    sollicitinfo.cpp
+    sollicitinfo.cpp \
+    ajoutmembre.cpp
 
 HEADERS  += mainwindow.h \
     membreinfo.h \
-    sollicitinfo.h
+    sollicitinfo.h \
+    ajoutmembre.h
 
 FORMS    += mainwindow.ui \
     membreinfo.ui \
-    sollicitinfo.ui
+    sollicitinfo.ui \
+    ajoutmembre.ui
 
 RESOURCES += \
     ressources.qrc

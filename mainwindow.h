@@ -8,6 +8,7 @@
 #include <QtCore>
 #include "membreinfo.h"
 #include "sollicitinfo.h"
+#include "ajoutmembre.h"
 
 namespace Ui {
 class MainWindow;
@@ -29,6 +30,10 @@ private slots:
     void on_tableView_doubleClicked(const QModelIndex &index);
 
     void on_tableView_2_doubleClicked(const QModelIndex &index);
+
+    void on_pushButton_clicked();
+
+    void on_pushButton_2_clicked();
 
 private:
     Ui::MainWindow *ui;
