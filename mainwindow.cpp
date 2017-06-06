@@ -36,7 +36,7 @@ void MainWindow::on_tableView_doubleClicked(const QModelIndex &index)
     Membreinfo membreinfo(numIndexMembre);
     membreinfo.setWindowTitle("Membre");
     membreinfo.setFixedSize(559,419);
-    membreinfo.setWindowIcon(QIcon("C:/Users/mohammed/Desktop/Projetbdd/marrakech.png"));
+    membreinfo.setWindowIcon(QIcon("C:/path/to/icon/marrakech.png"));
     membreinfo.setModal(true);
     membreinfo.exec();
 }
@@ -49,7 +49,7 @@ void MainWindow::on_tableView_2_doubleClicked(const QModelIndex &index)
     sollicitinfo solliwin(indannecompagne,indnumfiche);
     solliwin.setWindowTitle("Sollicitation");
     solliwin.setFixedSize(601,429);
-    solliwin.setWindowIcon(QIcon("C:/Users/mohammed/Desktop/Projetbdd/marrakech.png"));
+    solliwin.setWindowIcon(QIcon("C:/path/to/icon/marrakech.png"));
     solliwin.setModal(true);
     solliwin.exec();
 }
