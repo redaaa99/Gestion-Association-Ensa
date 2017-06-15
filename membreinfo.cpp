@@ -38,6 +38,7 @@ Membreinfo::Membreinfo(int indexm):ui(new Ui::Membreinfo)
     {
         ui->checkBox_2->setChecked(1);
     }
+    qDebug() <<QString::number(indexm);
     modelpersonne->setQuery("SELECT Type as Diplome,AnneeObtention as 'Année Obtention',NomFac as 'Faculté',NomDepartement as 'Département' FROM `membre`,`obtention`,`diplome`,`departement`,`faculte` WHERE (membre.NumMembre=obtention.NumMembre && diplome.Numdiplome = obtention.Numdiplome && diplome.Numdepartement=departement.Numdepartement && departement.NumFac=faculte.NumFac && membre.NumMembre= "+QString::number(indexm)+")");
     ui->tableView->setModel(modelpersonne);
     ui->tableView->resizeColumnsToContents();

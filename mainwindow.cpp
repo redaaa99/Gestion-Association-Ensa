@@ -18,11 +18,15 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->tableView->setModel(model);
     ui->tableView->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch);
     ui->tableView->verticalHeader()->setVisible(false);
+    ui->tableView->setSelectionBehavior( QAbstractItemView::SelectItems );
+    ui->tableView->setSelectionMode( QAbstractItemView::SingleSelection );
     this->modelsollicit=new QSqlQueryModel();
     modelsollicit->setQuery("SELECT NomMembre as 'Nom Solliciteur',PrenomMembre as 'Prenom Solliciteur',AnneeCampagne as 'Annee Campagne',NumFicheSollicit as 'N° Fiche' FROM `sollicitation`,`campagne`,`membre` WHERE (sollicitation.NumMembreSolliciteur=membre.NumMembre && sollicitation.NumCampagne=campagne.NumCampagne) GROUP BY NumFicheSollicit");
     ui->tableView_2->setModel(modelsollicit);
     ui->tableView_2->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch);
     ui->tableView_2->verticalHeader()->setVisible(false);
+    ui->tableView_2->setSelectionBehavior( QAbstractItemView::SelectItems );
+    ui->tableView_2->setSelectionMode( QAbstractItemView::SingleSelection );
 }
 
 MainWindow::~MainWindow()
@@ -32,7 +36,7 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_tableView_doubleClicked(const QModelIndex &index)
 {
-    int numIndexMembre =  index.row() +1;
+    int numIndexMembre =  index.sibling(index.row(), 0).data().toInt();
     Membreinfo membreinfo(numIndexMembre);
     membreinfo.setWindowTitle("Membre");
     membreinfo.setFixedSize(559,419);
@@ -87,3 +91,18 @@ void MainWindow::on_pushButton_2_clicked()
     model->setQuery("SELECT NumMembre as Matricule,NomMembre as Nom,PrenomMembre as Prenom FROM membre");
     ui->tableView->setModel(model);
 }
+
+void MainWindow::on_pushButton_3_clicked()
+{
+    QModelIndexList indexes = ui->tableView->selectionModel()->selection().indexes();
+    QModelIndex index = indexes.at(0);
+    QString id = index.sibling(index.row(), 0).data().toString();
+    //qDebug() << id;
+    ajoutdiplome ajouterdiplome(id);
+    ajouterdiplome.setFixedSize(262,246);
+    ajouterdiplome.setWindowIcon(QIcon("C:/Users/mohammed/Desktop/Projetbdd/marrakech.png"));
+    ajouterdiplome.setModal(true);
+    ajouterdiplome.setWindowTitle("Ajout Diplome");
+    ajouterdiplome.exec();
+}
+
